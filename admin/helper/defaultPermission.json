@@ -1,0 +1,229 @@
+[
+  {
+    "route": "/dashboard",
+    "description": "Can View the dashboard page in side nav",
+    "can": "dashboard.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/admins",
+    "description": "Can View the admin page in side nav",
+    "can": "admin.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/admins",
+    "description": "Can approve wallet payments",
+    "can": "admin.approve_wallet",
+    "parent": ["admins"]
+  },
+  {
+    "route": "/manage-user",
+    "description": "Can View the manage user page in side nav",
+    "can": "manage-user.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/manage-products",
+    "description": "Can View the manage products page in side nav",
+    "can": "manage-products.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/manage-categories",
+    "description": "Can View the manage categories page in side nav",
+    "can": "manage-categories.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/manage-payouts",
+    "description": "Can View the manage payouts page in side nav",
+    "can": "manage-payouts.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/manage-payouts",
+    "description": "Can View the manage payouts page in side nav",
+    "can": "manage-payouts.approve",
+    "parent": ["manage-payouts"]
+  },
+  {
+    "route": "/manage-reports",
+    "description": "Can View the manage payouts page in side nav",
+    "can": "manage-reports.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/community-chat",
+    "description": "Can View the community chat page in side nav",
+    "can": "community-chat.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/investor-chat",
+    "description": "Can View the investor chat page in side nav",
+    "can": "investor-chat.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/settings",
+    "description": "Can View the settings page in side nav",
+    "can": "settings.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/portfolio",
+    "description": "Can View the portfolio page in side nav",
+    "can": "portfolio.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/chat",
+    "description": "Can View the chat page in side nav",
+    "can": "chat.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/wallet",
+    "description": "Can View the wallet page in side nav",
+    "can": "wallet.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/profile",
+    "description": "Can View the profile page in side nav",
+    "can": "profile.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/private-chat",
+    "description": "Can View the private chat page in side nav",
+    "can": "private-chat.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/buyer",
+    "description": "Can View the buyer page in side nav",
+    "can": "buyer.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/users",
+    "description": "Can View the users page in side nav",
+    "can": "users.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/users/delete-users",
+    "description": "Can delete a user",
+    "can": "users.delete",
+    "parent": ["users"]
+  },
+  {
+    "route": "/users/edit-user",
+    "description": "Can edit details of an user",
+    "can": "users.user",
+    "parent": ["users"]
+  },
+  {
+    "route": "/users/update-password",
+    "description": "Can Update his password",
+    "can": "users.updatepassword",
+    "parent": ["users"]
+  },
+  {
+    "route": "/users/add-user",
+    "description": "Can add new user",
+    "can": "users.create",
+    "parent": ["users"]
+  },
+
+  {
+    "route": "/permissions",
+    "description": "Can view the permissions in side nav",
+    "can": "permissions.nav",
+    "parent": ["$"]
+  },
+
+  {
+    "route": "/permissions/add-permission",
+    "description": "Can add new permission",
+    "can": "permissions.create",
+    "parent": ["permissions"]
+  },
+  {
+    "route": "/roles",
+    "description": "Can view the roles in side nav",
+    "can": "roles.nav",
+    "parent": ["$"]
+  },
+  {
+    "route": "/roles/delete-role",
+    "description": "Can delete role",
+    "can": "roles.delete",
+    "parent": ["roles"]
+  },
+  {
+    "route": "/roles/restore-role",
+    "description": "Can restore role",
+    "can": "roles.restore",
+    "parent": ["roles"]
+  },
+  {
+    "route": "/roles/edit-role",
+    "description": "Can edit details of role",
+    "can": "roles.edit",
+    "parent": ["roles"]
+  },
+  {
+    "route": "/roles/export-role",
+    "description": "Can export roles",
+    "can": "roles.export",
+    "parent": ["roles"]
+  },
+
+  {
+    "route": "/roles/add-role",
+    "description": "Can add new role",
+    "can": "roles.create",
+    "parent": ["roles"]
+  },
+
+  {
+    "route": "/permissions/export",
+    "description": "Can export permission",
+    "can": "permissions.export",
+    "parent": ["permissions"]
+  },
+  {
+    "route": "/permissions/restore-permission",
+    "description": "Can restore permission",
+    "can": "permissions.restore",
+    "parent": ["permissions"]
+  },
+
+  {
+    "route": "/permissions/delete-permission",
+    "description": "Can delete permission",
+    "can": "permissions.delete",
+    "parent": ["permissions"]
+  },
+  {
+    "route": "/permissions/edit-permission",
+    "description": "Can edit details of permission",
+    "can": "permissions.edit",
+    "parent": ["permissions"]
+  },
+  {
+    "route": "/permissions/feature",
+    "description": "Can add multiple permissions in json formate",
+    "can": "permissions.feature.create",
+    "parent": ["permissions"]
+  },
+  {
+    "route": "/permissions/load",
+    "description": "Can load default permissions in db",
+    "can": "permissions.load",
+    "parent": ["permissions"]
+  }
+]

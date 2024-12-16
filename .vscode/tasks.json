@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Backend (macOS/Linux)",
+      "type": "shell",
+      "dependsOn": ["admin", "user", "products", "notification"]
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "path": "/admin",
+      "problemMatcher": [],
+      "label": "admin",
+      "detail": "nodemon server.js"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "path": "/user",
+      "problemMatcher": [],
+      "label": "user",
+      "detail": "nodemon server.js"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "path": "/products",
+      "problemMatcher": [],
+      "label": "products",
+      "detail": "nodemon server.js"
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "path": "/notifications",
+      "problemMatcher": [],
+      "label": "notification",
+      "detail": "nodemon server.js"
+    }
+  ]
+}

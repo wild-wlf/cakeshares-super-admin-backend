@@ -1,0 +1,46 @@
+module.exports = mongo => {
+  return {
+    schema: {
+      userId: { type: mongo.Schema.Types.ObjectId, ref: 'user', required: true },
+      productName: { type: String, required: true, trim: true },
+      investmentType: { type: mongo.Schema.Types.ObjectId, ref: 'category', required: true },
+      addressDetails: {
+        street_address: { type: String },
+        city: { type: String },
+        state: { type: String },
+        postal_code: { type: String },
+        country: { type: String },
+        latlng: { lat: Number, lng: Number },
+      },
+      address: { type: String, trim: true },
+      mapCheck: { type: Boolean, default: true },
+      deadline: { type: Date, required: true },
+      kycLevel: { type: Number, max: 3, default: 0 },
+      description: { type: String, trim: true },
+      investmentReason: { type: String, trim: true },
+      media: { type: [String] },
+      amenities: {
+        type: [String],
+        validate: {
+          validator: v => v.length <= 10,
+          message: 'Amenities cannot be more than 10',
+        },
+      },
+      minimumBackers: { type: Number, default: 1, required: true },
+      maximumBackers: { type: Number, required: false },
+      isInfiniteBackers: { type: Boolean, default: false },
+      currentBackers: { type: Number, default: 0 },
+      assetValue: { type: Number, required: true },
+      minimumInvestment: { type: Number, required: true },
+      valueRaised: { type: Number, default: 0 },
+      isVerified: { type: Boolean, default: false },
+      verificationStatus: { type: String, enum: ['pending', 'approved', 'rejected'], default: 'pending' },
+      declineReason: { type: String, trim: true },
+      isProductRequest: { type: Boolean, default: false },
+      editRequestDeclineReason: { type: String, trim: true },
+      returnRatio: { type: Number, default: 0 },
+      annualCost: { type: Number, default: 0 },
+    },
+    collection: 'product',
+  };
+};

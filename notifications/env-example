@@ -1,0 +1,9 @@
+PORT = 4010
+SECRET = "cakeshare_secret"
+MONGO_URI = "mongodb://127.0.0.1:27017/cakeshares"
+WINDOW = 30
+MAX_LIMIT = 10
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=us-west-1
+AWS_S3_BUCKET_NAME=cakeshares
